@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="59" id="KGk-i7-Jjw" customClass="MessageCell" customModule="Lab9_6614110014" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="336" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-F6-R7N">
+                        <rect key="frame" x="10" y="10" width="316" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eaddy" translatesAutoresizingMaskIntoConstraints="NO" id="nrH-Tf-TiH">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Aci-Kh-Kbl"/>
+                                    <constraint firstAttribute="width" constant="40" id="mv0-Vh-8k6"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ND-zJ-lST">
+                                <rect key="frame" x="50" y="0.0" width="216" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUv-Vn-mKV">
+                                        <rect key="frame" x="3" y="3" width="210" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BrandPurple"/>
+                                <constraints>
+                                    <constraint firstItem="RUv-Vn-mKV" firstAttribute="leading" secondItem="0ND-zJ-lST" secondAttribute="leading" constant="3" id="9cM-As-vea"/>
+                                    <constraint firstItem="RUv-Vn-mKV" firstAttribute="top" secondItem="0ND-zJ-lST" secondAttribute="top" constant="3" id="TU7-nZ-Q6d"/>
+                                    <constraint firstAttribute="bottom" secondItem="RUv-Vn-mKV" secondAttribute="bottom" constant="3" id="ULk-zp-ZME"/>
+                                    <constraint firstAttribute="trailing" secondItem="RUv-Vn-mKV" secondAttribute="trailing" constant="3" id="njO-4H-mi9"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mrg" translatesAutoresizingMaskIntoConstraints="NO" id="iGC-Jd-g8e">
+                                <rect key="frame" x="276" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9LP-lz-RjM"/>
+                                    <constraint firstAttribute="width" constant="40" id="KQk-0p-oc5"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="eg9-F6-R7N" secondAttribute="trailing" constant="10" id="2fi-GI-gER"/>
+                    <constraint firstItem="eg9-F6-R7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Gzp-sC-2jL"/>
+                    <constraint firstItem="eg9-F6-R7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="axR-oG-8Z9"/>
+                    <constraint firstAttribute="bottom" secondItem="eg9-F6-R7N" secondAttribute="bottom" constant="10" id="ycS-Pn-sv9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="RUv-Vn-mKV" id="AJe-ey-kEe"/>
+                <outlet property="leftImageView" destination="nrH-Tf-TiH" id="N5a-AA-dfH"/>
+                <outlet property="messageBubble" destination="0ND-zJ-lST" id="5oO-Vj-RPZ"/>
+                <outlet property="rightImageView" destination="iGC-Jd-g8e" id="cu5-Sb-SSp"/>
+            </connections>
+            <point key="canvasLocation" x="141.98473282442748" y="-5.9859154929577469"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="eaddy" width="288" height="288"/>
+        <image name="mrg" width="288" height="288"/>
+        <namedColor name="BrandPurple">
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
